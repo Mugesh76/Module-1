@@ -1,38 +1,37 @@
-## Experiment No: 1d – Conditional Statements- Checking Number Type
+
+
+# Experiment No: 1e – SEB-Minimum of Three Numbers
 
 ## AIM  
-To write a Python program that reads a number from the user and checks whether it is zero, positive, or negative using the if-elif-else statement.
+To write a Python program to find the minimum between three integer numbers using a conditional expression (Ternary operator).
 
 ## ALGORITHM  
-1.Start the program.
-
-2.Read a number from the user and store it in a variable (say num).
-
-3.Check if the number is equal to 0 if True, print "Number is 0".
-
-4.Else if the number is greater than 0,print that it is a positive number.
-
-5.Else (the number is less than 0),print that it is a negative number.
-
-6.End the program.
+1. Begin the program.  
+2. Read the three numbers: `num1`, `num2`, and `num3` from the user.  
+3. Compare `num1`, `num2`, and `num3` to find the smallest number:  
+   - If `num1` is less than or equal to both `num2` and `num3`, then `num1` is the minimum.  
+   - Else, if `num2` is less than or equal to both `num1` and `num3`, then `num2` is the minimum.  
+   - Otherwise, `num3` is the minimum.  
+4. Print the minimum value along with the input numbers in the format:  
+   `"The minimum of num1, num2, num3 is min_num."`  
+5. Terminate the program.
 
 ## PROGRAM
 ```python
 # Write your code here
 
-num = int(input())
-if num>0:
-    print(f"{num} is a Positive number")
-elif num<0:
-    print(f"{num} is a Negative number")
-elif num==0:
-    print("Number is 0")
-else:
-    print("invalid number")
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+
+min_num = num1 if (num1 <= num2 and num1 <= num3) else num2 if (num2 <= num1 and num2 <= num3) else num3
+
+print(f"The minimum of {num1}, {num2}, {num3} is {min_num}")
 ```
 
 ## OUTPUT
-![Screenshot (211)](https://github.com/user-attachments/assets/362f7e22-f505-4c4a-bfef-a25626d6e09a)
+![Screenshot (208)](https://github.com/user-attachments/assets/bd2752ca-60c5-4595-9770-edce139414f9)
+
 
 ## RESULT
-Thus the python program for Checking Number Type was implemented and executed successfully.
+Thus the python program for finding minimum of three numbers is executed successfully.
